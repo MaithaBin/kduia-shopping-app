@@ -6,10 +6,32 @@ import ExpenseList from './components/ExpenseList';
 import ItemSelected from './components/ItemSelected';
 import Location from './components/Location';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    </div>
+    <AppProvider>
+        <div className='containerApp'>
+            <h1 className='mt-3'>Shopping Application</h1>
+            <div className='row mt-3'>
+                <div className='col-sm'>
+                    <CartValue />
+                </div>
+                <div className='col-sm'>
+                    <Location />
+                </div>
+                <h3 className='mt-3'>Shopping Cart</h3>
+                <div className='row '>
+                        <ExpenseList />
+                </div>
+                <h3 className='mt-3'>Add Item</h3>
+                <div className='mt-3'>
+                    <div className='col-sm'>
+                        <ItemSelected/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </AppProvider>
+
   );
 }
 
